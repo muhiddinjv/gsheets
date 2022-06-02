@@ -1,0 +1,95 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        -100,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "Heisenberg"
+            },
+            {
+              "name": "description",
+              "value": "Lets cook"
+            },
+            {
+              "name": "date",
+              "value": "28.05.2022"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        400,
+        120
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": "1gyrULINgsv_z0Kzs0InW1Zyq97HecrIsdUIbayetJ78",
+        "options": {}
+      },
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 1,
+      "position": [
+        620,
+        120
+      ],
+      "credentials": {
+        "googleApi": {
+          "id": "2",
+          "name": "Google account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "path": "497618f4-05b7-4d59-ba60-470ca7ade4df",
+        "options": {}
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        120,
+        120
+      ],
+      "webhookId": "497618f4-05b7-4d59-ba60-470ca7ade4df"
+    }
+  ],
+  "connections": {
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {},
+  "id": 1
+}
