@@ -5,8 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    google sheets
+
+<form action="http://localhost:5678/webhook-test/497618f4-05b7-4d59-ba60-470ca7ade4df" method="POST" target="_blank">
+  <div class="input-wrapper">
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" name="name" placeholder="Name" required>
+  </div>
+  <div class="input-wrapper">
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" placeholder="Description" required>
+  </div>
+  <div class="input-wrapper">
+    <label for="date">Event Date:</label>
+    <input type="datetime-local" id="date" name="date" required>
+  </div>
+  <button type="submit">Submit</button>
+</form>
 </body>
 </html>

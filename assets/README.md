@@ -22,9 +22,9 @@ Requirements:
     - [x] 2.3 Create credential. Use attached service account credentials json (4 points)
 
 To validate that setup has been done correctly:
-- [ ] open workflow
-- [ ] run "Set" and "Google Sheets" nodes (see attached screenshot)
-- [ ] after that you should see data from "Set" node data appear in this [Google Sheet](https://docs.google.com/spreadsheets/d/1gyrULINgsv_z0Kzs0InW1Zyq97HecrIsdUIbayetJ78/edit#gid=0)
+- [x] open workflow
+- [x] run "Set" and "Google Sheets" nodes (see attached screenshot)
+- [x] after that you should see data from "Set" node data appear in this [Google Sheet](https://docs.google.com/spreadsheets/d/1gyrULINgsv_z0Kzs0InW1Zyq97HecrIsdUIbayetJ78/edit#gid=0)
 
 3. Connect or replace  "Set" node with "Webhook trigger" and make Google Sheet node receive dynamic data from webhook (20 points). 
 
