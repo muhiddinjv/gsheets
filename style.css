@@ -1,6 +1,8 @@
 *, *::before, *::after {
     outline: none;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
 }
 
 body{
@@ -9,7 +11,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: #DAF2FF;
+    background: #DAF2FF;    
 }
 
 form{
@@ -38,7 +40,5 @@ button{
     border: none;
     color: white;
     padding: 0.5rem;
-    padding-bottom: none;
-
 }
 
