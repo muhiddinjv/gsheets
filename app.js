@@ -58,7 +58,8 @@ function sendData() {
       // (C) INIT FETCH POST
 
       // Check "webhook" and replace the link below with your new link
-      const URL = "https://bright-rabbit-17.hooks.n8n.cloud/webhook-test/endpoint";
+      const URL = "http://localhost:5678/webhook-test/endpoint";
+      // "https://bright-rabbit-17.hooks.n8n.cloud/webhook-test/endpoint";
         // "http://localhost:5678/webhook-test/497618f4-05b7-4d59-ba60-470ca7ade4df";             
 
       fetch(URL, {
