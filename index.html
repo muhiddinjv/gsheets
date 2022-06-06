@@ -8,20 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-
-
   <!-- I could've used form action here b/c it...
   1) would make the code shorter
-  2) accessible to screenreaders and other assistive devices
+  2) is accessible to screenreaders and other assistive devices
   3) enables a range of built-in browser features
   4) makes it simpler to build basic functional sign-in for older browsers
   5) can still work even if JavaScript fails
   6) triggers ENTER button on keyboard to submit the form
-  but still its not a good idea  -->
+  but still its not as flexible as javascript fetch.
+  Just uncomment the code below if you want to try it  -->
 
 <!-- <iframe name="hiddenFrame" class="hide"></iframe> //hidden iframe helps to stay on the same page
-  
+
 <form class="form" action="http://localhost:5678/webhook-test/497618f4-05b7-4d59-ba60-470ca7ade4df" method="POST" target="hiddenFrame">
   <div class="input-wrapper">
     <label for="name">Enter your name:</label>
@@ -38,23 +36,25 @@
   <button type="submit">Submit</button>
 </form>  -->
 
+<form onsubmit="return sendData()">
+  <div class="input-wrapper">
+    <label for="name-input">Enter your name:</label>
+    <input type="text" id="name-input" name="name" placeholder="Name" >
+  </div>
+  <div class="name"></div>
 
-<form class="form" onsubmit="return sendData()">
   <div class="input-wrapper">
-    <label for="name">Enter your name:</label>
-    <input type="text" id="name" name="name" placeholder="Name">
+    <label for="description-input">Description:</label>
+    <input type="text" id="description-input" name="description" placeholder="Description">
   </div>
-  <div class="validate-name required"></div>
+  <div class="description"></div>
+
   <div class="input-wrapper">
-    <label for="description">Description:</label>
-    <input type="text" id="description" name="description" placeholder="Description">
+    <label for="date-input">Event Date:</label>
+    <input type="datetime-local" id="date-input" name="date">
   </div>
-  <div class="validate-description required"></div>
-  <div class="input-wrapper">
-    <label for="date">Event Date:</label>
-    <input type="datetime-local" id="date" name="date">
-  </div>
-  <div class="validate-date required"></div>
+  <div class="date"></div>
+
   <button id="submit">Submit</button>
 </form>
 
